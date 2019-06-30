@@ -6,6 +6,11 @@
 body{
   padding-bottom: 50px;
 }
+
+.img-logo{
+  width: 120px;
+}
+
 /*Animaciones*/
 
 .animated {
