@@ -66,6 +66,22 @@ export class HeroesService {
     getHeroe(idx: number){
       return this.heroes[idx];
     }
+
+    buscarHeroes(termino:string):Heroe[]{
+      let heroesArr:Heroe[] = [];
+      termino = termino.toLowerCase();//pasamos a minuscula
+
+      //for de EMSC6
+      for(let heroe of this.heroes){
+        let nombre = heroe.nombre.toLowerCase();
+        if(nombre.indexOf(termino)>=0){
+          heroesArr.push(heroe);
+        }
+
+      }
+
+      return heroesArr;
+    }
 }
 
 
