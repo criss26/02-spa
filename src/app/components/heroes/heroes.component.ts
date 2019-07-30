@@ -15,7 +15,7 @@ export class HeroesComponent implements OnInit {
 
   //en el contructor del componente declaramos los servicios
   constructor(private _heroesService:HeroesService,
-              private _router:Router) {//mucho antes de la renderizacion.
+              private router:Router) {//mucho antes de la renderizacion.
       console.log("constructor");//Esto se va a ejecutar antes que el ngOnInit!!!
   }
 
@@ -25,11 +25,12 @@ export class HeroesComponent implements OnInit {
       console.log(this.heroes);
   }
 
+  /*
   verHeroe(idx:number){
     console.log(idx);
     //tenemos que importar el router.
     //con esto redireccionamos
-    this._router.navigate(['/heroe',idx]);
-  }
-
+    this.router.navigate(['/heroe',idx]);
+  }*/
+  
 }

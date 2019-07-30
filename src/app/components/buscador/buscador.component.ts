@@ -30,11 +30,12 @@ export class BuscadorComponent implements OnInit {
                 });
   }
 
+  /* Lo llevamos a componente tarjeta
   verHeroe(idx:number){
     console.log(idx);
     //tenemos que importar el router.
     //con esto redireccionamos
     this.router.navigate(['/heroe',idx]);
-  }
+  }*/
 
 }

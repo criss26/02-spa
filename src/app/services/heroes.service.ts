@@ -72,12 +72,20 @@ export class HeroesService {
       termino = termino.toLowerCase();//pasamos a minuscula
 
       //for de EMSC6
-      for(let heroe of this.heroes){
+      //for(let heroe of this.heroes){
+      //  let nombre = heroe.nombre.toLowerCase();
+      //  if(nombre.indexOf(termino)>=0){
+      //    heroesArr.push(heroe);
+      //  }
+      //}
+
+      for(let i=0; i<this.heroes.length; i++){
+        let heroe = this.heroes[i];
         let nombre = heroe.nombre.toLowerCase();
         if(nombre.indexOf(termino)>=0){
+          heroe.idx = i;
           heroesArr.push(heroe);
         }
-
       }
 
       return heroesArr;
@@ -91,4 +99,5 @@ export interface Heroe{ //repaso de interfaces de type script
     img: string;
     aparicion: string;
     casa: string;
+    idx?: number;
 }
